@@ -7,14 +7,6 @@ php:
 branches:
   only:
     - master
-
-env:
-  global:
-    secure : - "FTP_USER=user"
-    secure : - "FTP_PASSWORD=password"
-after_success:
-    "curl -u $FTP_USER:$FTP_PASSWORD ftp://marin-olivier.fr/dev-annonces/"
-
 env:
 - DB=mysql
 - DB=pgsql
